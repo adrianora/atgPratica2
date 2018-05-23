@@ -11,7 +11,7 @@ import main.GraphLib;
 public class Suite {
 
 	GraphLib novo;
-	String path = "src/graphs/grafo1";
+	String path = "grafos/grafo1.txt";
 
 	public Suite() {
 		novo = new GraphLib();
