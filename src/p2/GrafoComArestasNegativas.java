@@ -9,39 +9,39 @@ import org.junit.Test;
 import grafo.Graph;
 import main.GraphLib;
 
-public class GrafoConectadoSemPeso {
-	
+public class GrafoComArestasNegativas {
+
 	GraphLib novo;
-	String path2 = "grafos/grafoSemPeso.txt";
+	String path = "grafos/grafoComArestasNegativas.txt";
 	Graph graph;
 	
-	public GrafoConectadoSemPeso() {
+	public GrafoComArestasNegativas() {
 		
 		novo = new GraphLib();
-		this.graph= novo.readGraph(path2);
-	
+		this.graph= novo.readGraph(path);
+		
 	}
 	
 	@Test
 	public void vertexNumber() {
 	
-		assertEquals(5, novo.getVertexNumber(graph));
+		assertEquals(4, novo.getVertexNumber(graph));
 	
 	}
 	
 	@Test
 	public void testGetEdgeNumber() {
 		
-		assertEquals(5, novo.getEdgeNumber(graph));
+		assertEquals(3, novo.getEdgeNumber(graph));
 	}
 	
 	@Test
 	public void testGetMeanEdge() {
 		
-		Graph grafo2 = novo.readGraph(path2);
+		Graph grafo2 = novo.readGraph(path);
 		DecimalFormat df = new DecimalFormat("0.#");
 		String saida = df.format(novo.getMeanEdge(grafo2));
-		assertEquals("0", saida);		
+		assertEquals("-8", saida, 0);		
 	}
 	
 	@Test
@@ -50,7 +50,6 @@ public class GrafoConectadoSemPeso {
 		assertEquals(true, novo.connected(graph));
 		
 	}
-	
-	
-
 }
+
+
