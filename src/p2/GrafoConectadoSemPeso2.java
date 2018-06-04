@@ -106,7 +106,6 @@ public class GrafoConectadoSemPeso2 {
 		System.out.println('\n');
 		System.out.println(novo.BFS(graph, 1));*/
 		
-		//Lança a exception ArrayIndexOutOfBoundsException
 		assertTrue(tree.equals(novo.BFS(graph, 1)));
 	}
 	
@@ -126,7 +125,6 @@ public class GrafoConectadoSemPeso2 {
 		System.out.println('\n');
 		System.out.println(novo.DFS(graph, 1));*/
 		
-		//Lança a exception ArrayIndexOutOfBoundsException
 		assertTrue(tree2.equals(novo.DFS(graph, 1)));
 	
 	}
@@ -145,11 +143,4 @@ public class GrafoConectadoSemPeso2 {
 		assertTrue(shortestPath2.equals(graph.shortestPath(v, vFinal2)));
 	}
 	
-	@Test
-	public void testMFS() {
-		
-		//Método não implementado
-		assertTrue(false);
-	}
-
 }
