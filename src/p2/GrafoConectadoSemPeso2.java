@@ -6,6 +6,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.Test;
 
 import grafo.Graph;
+import grafo.Vertice;
 import main.GraphLib;
 
 public class GrafoConectadoSemPeso2 {
@@ -77,6 +78,7 @@ public class GrafoConectadoSemPeso2 {
 		assertTrue(saida1.equals(novo.graphRepresentation(graph, "AM")));
 		assertTrue(saida2.equals(novo.graphRepresentation(graph, "AL")));
 	}
+	
 	@Test 
 	public void testGraphRepresentation2() {
 		
@@ -95,6 +97,7 @@ public class GrafoConectadoSemPeso2 {
 		
 		assertTrue(saida2.equals(novo.graphRepresentation(graph, "AL")));
 	}
+	
 	@Test
 	public void testBFS() {
 		
@@ -115,6 +118,7 @@ public class GrafoConectadoSemPeso2 {
 		//Lança a exception ArrayIndexOutOfBoundsException
 		assertTrue(tree.equals(novo.BFS(graph, 1)));
 	}
+	
 	@Test
 	public void testDFS() {
 		
@@ -133,6 +137,21 @@ public class GrafoConectadoSemPeso2 {
 		
 		//Lança a exception ArrayIndexOutOfBoundsException
 		assertTrue(tree2.equals(novo.DFS(graph, 1)));
+	
+	}
+	
+	@Test
+	public void testShortestPath() {
+		
+		String shortestPath = "1 99 30 4";
+		String shortestPath2 = "1 99 7";
+		
+		Vertice v = new Vertice(1);
+		Vertice vFinal = new Vertice(4);
+		Vertice vFinal2 = new Vertice(7);
+		
+		assertTrue(shortestPath.equals(graph.shortestPath(v, vFinal)));
+		assertTrue(shortestPath2.equals(graph.shortestPath(v, vFinal2)));
 	}
 
 }
