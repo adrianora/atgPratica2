@@ -137,8 +137,9 @@ public class GrafoDesconexoComPesosNegativos {
 		Vertice vFinal = new Vertice(9);
 		Vertice vFinal2 = new Vertice(6);
 		
-		assertTrue(shortestPath.equals(graph.shortestPath(v, vFinal)));
-		assertTrue(shortestPath2.equals(graph.shortestPath(v, vFinal2)));
+	//	assertTrue(shortestPath.equals(graph.shortestPath(v, vFinal)));
+	//	assertTrue(shortestPath2.equals(graph.shortestPath(v, vFinal2)));
+		assertTrue(false);
 	}
 	
 }

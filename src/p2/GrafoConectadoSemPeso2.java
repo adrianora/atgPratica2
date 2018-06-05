@@ -62,9 +62,9 @@ public class GrafoConectadoSemPeso2 {
 				+ "30 0 0 1 0 1 0 0 1\n"
 				+ "99 1 0 0 0 1 0 1 0";	
 		
-		/*System.out.println(novo.graphRepresentation(graph, "AM"));
+		System.out.println(novo.graphRepresentation(graph, "AM"));
 		System.out.println('\n');
-		System.out.println(saida1); */
+		System.out.println(saida1); 
 
 		assertTrue(saida1.equals(novo.graphRepresentation(graph, "AM")));
 	

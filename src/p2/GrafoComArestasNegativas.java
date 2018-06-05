@@ -113,8 +113,9 @@ public class GrafoComArestasNegativas {
 		Vertice vFinal = new Vertice(3);
 		Vertice vFinal2 = new Vertice(4);
 		
-		assertTrue(shortestPath.equals(graph.shortestPath(v, vFinal)));
-		assertTrue(shortestPath2.equals(graph.shortestPath(v, vFinal2)));
+	//	assertTrue(shortestPath.equals(graph.shortestPath(v, vFinal)));
+	//	assertTrue(shortestPath2.equals(graph.shortestPath(v, vFinal2)));
+		assertTrue(false);
 	}
 }
 
