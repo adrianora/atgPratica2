@@ -6,6 +6,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.Test;
 
 import grafo.Graph;
+import grafo.Vertice;
 import main.GraphLib;
 
 public class Grafo3 {
@@ -72,6 +73,21 @@ public class Grafo3 {
 		System.out.println(novo.graphRepresentation(graph, "AL"));*/
 
 		assertTrue(saida2.equals(novo.graphRepresentation(graph, "AL")));
+	}
+	
+	@Test
+	public void testShortestPath() {
+		
+		String shortestPath = "1 2 3";
+		String shortestPath2 = "1 2 3 4";
+		
+		Vertice v = new Vertice(1);
+		Vertice vFinal = new Vertice(3);
+		Vertice vFinal2 = new Vertice(4);
+		
+		assertTrue(shortestPath.equals(graph.shortestPath(v, vFinal)));
+		assertTrue(shortestPath2.equals(graph.shortestPath(v, vFinal2)));
+	
 	}
 
 }
